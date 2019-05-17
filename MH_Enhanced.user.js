@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        MouseHunt AutoBot Enhanced Edition
 // @author      Ooi Keng Siang, CnN
-// @version    	1.37.10
+// @version    	1.37.13
 // @namespace   http://ooiks.com/blog/mousehunt-autobot, https://devcnn.wordpress.com/
 // @description Ooiks: An advance user script to automate sounding the hunter horn in MouseHunt application in Facebook with MouseHunt version 3.0 (Longtail) supported and many other features. CnN: An enhanced version to sound horn based on selected algorithm of event or location.
 // @require		https://code.jquery.com/jquery-2.2.2.min.js
@@ -7549,7 +7549,7 @@ function displayKingRewardSumTime(timeStr) {
 // ################################################################################################
 
 function soundHorn() {
-	var isAtCampPage = (isNewUI)? (document.getElementById('journalContainer') !== null) : (document.getElementById('huntingTips') !== null) ;
+	var isAtCampPage = (document.getElementById('journalContainer') !== null);
 	if (!isAtCampPage) {
 		displayTimer("Not At Camp Page", "Not At Camp Page", "Not At Camp Page");
 		window.setTimeout(function () { soundHorn(); }, timerRefreshInterval * 1000);
